@@ -2,8 +2,9 @@ const express = require('express');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const mongoSanitize = require('express-mongo-sanitize');
-const xss = require('helmet');
 const compression = require('compression');
+const xss = require('xss-clean');
+const helmet = require('helmet');
 
 const brandRouter = require('./routes/brandRoute');
 const watchRouter = require('./routes/watchRoute');
